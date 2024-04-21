@@ -41,6 +41,7 @@ Securely validates the token. The signature is calculated by encoding the header
 concatenating the two together with a period separator. That string is then run through the cryptographic algorithm specified in the header. 
 
 Example:
+
 	``` 
 	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
