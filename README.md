@@ -101,3 +101,8 @@ which assigns req.secret so it may be used by other middleware.
 
 Nodemon is a utility depended on about 3 million projects, that will monitor for any changes in your source and automatically restart your server. 
 Perfect for development. Swap nodemon instead of node to run your code, and now your process will automatically restart when your code changes. 
+
+
+##  *dotenv* package
+
+dotenv package will spawn the process with the environment variables based on a .env file.
