@@ -107,3 +107,21 @@ Perfect for development. Swap nodemon instead of node to run your code, and now 
 ##  *dotenv* package
 
 dotenv package will spawn the process with the environment variables based on a .env file.
+
+
+##  *uuid*  package
+
+For the creation of RFC4122 UUIDs.
+
+Cross-platform, support for: 
+  - CommonJS, ECMAScript Modules and CDN builds
+  - NodeJS 12+ (LTS releases)
+  - Chrome, Safari, Firefox, Edge browsers
+  - Webpack and rollup.js module bundlers
+  - React Native / Expo
+
+Secure - Cryptographically-strong random values
+
+Small - Zero-dependency, small footprint, plays nice with "tree shaking" packagers
+
+CLI - Includes the uuid command line utility
