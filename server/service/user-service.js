@@ -90,7 +90,7 @@ class UserService {
 			throw ApiError.UnauthorizedError();
 		}
 
-		const user = await userModel.findOne(payload.id);
+		const user = await userModel.findOne({_id: payload.id});
 		const user_dto = new userDto(user);
 		const tokens = tokenService.GenerateTokens({...user_dto});
 
