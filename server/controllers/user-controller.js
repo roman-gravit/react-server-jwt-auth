@@ -1,4 +1,9 @@
 const userService = require("../service/user-service");
+
+const dotenv = require("dotenv");
+dotenv.config();
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:3000';
+
 class UserController {
 
 	async Registration(req, resp, next) {
@@ -33,9 +38,12 @@ class UserController {
 
 	async Activate(req, resp, next) {
 		try {
+			const link = req.params.link;
+			await userService.ActivateUser(link);
+			return resp.redirect(CLIENT_URL);
 
 		} catch(e) {
-			
+			console.log(`!!! Error during user activation: ${e}`);
 		}
 	}
 

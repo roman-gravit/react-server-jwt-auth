@@ -13,4 +13,4 @@ const TokenSchema = new Schema({
 
 const Token = model("Token", TokenSchema);
 
-module.require = Token;
+module.exports = Token;
