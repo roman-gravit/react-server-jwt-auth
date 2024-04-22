@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const router = require("../server/router/router");
+const errorMiddleware = require("./middleware/error-middleware");
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -18,6 +19,10 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use("/api", router);
+
+// last middleware: error handling
+app.use(errorMiddleware);
+
 
 const start = async() => {
 

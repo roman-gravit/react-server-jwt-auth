@@ -34,6 +34,36 @@ class TokenService {
 		return token;
 	}
 
+	async RemoveToken(refresh_token) {
+		const tokenData = await TokenModel.deleteOne({refreshToken: refresh_token});
+		return tokenData;
+	}
+
+	async FindToken(refresh_token) {
+		const tokenData = await TokenModel.findOne({refreshToken: refresh_token});
+		return tokenData;
+	}
+
+	ValidateAccessToken(token) {
+		try {
+			const payload = jwt.verify(token, JWT_ACCESS_SECRET);
+			return payload;
+
+		} catch(e) {
+			return null;
+		}
+	}
+
+	ValidateRefreshToken(token) {
+		try {
+			const payload = jwt.verify(token, JWT_REFRESH_SECRET);
+			return payload;
+
+		} catch(e) {
+			return null;
+		}
+	}
+
 }
 
 module.exports = new TokenService();
