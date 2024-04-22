@@ -4,9 +4,9 @@ const tokenService = require("../service/token-service");
 module.exports = function(req, resp, next) {
 	try {
 
-		if(req.method === "OPTIONS") {
-			return next();
-		}
+		//if(req.method === "OPTIONS") {
+		//	return next();
+		//}
 
 		const auth_header = req.headers["authorization"];
 		if(!auth_header) {

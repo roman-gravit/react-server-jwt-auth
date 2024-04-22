@@ -1,14 +1,11 @@
 import React from 'react';
+import LoginForm from './components/login-form';
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          123546
-        </p>
-      </header>
+      <LoginForm/>
     </div>
   );
 }
